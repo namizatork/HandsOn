@@ -1,0 +1,27 @@
+ip: 192.168.55.10
+memory: 2048
+cpus: 2
+provider: virtualbox
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+folders:
+    -
+        map: /Users/namizato/app/HandsOn
+        to: /home/vagrant/code
+sites:
+    -
+        map: homestead.test
+        to: /home/vagrant/code/laravel/public
+databases:
+    - homestead
+features:
+    -
+        mariadb: false
+    -
+        ohmyzsh: false
+    -
+        webdriver: false
+name: handson
+hostname: handson
+version: 8.0.0
